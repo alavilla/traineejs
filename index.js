@@ -9,16 +9,16 @@ class Vehiculo{
   }
 
   class Auto extends Vehiculo {
-    constructor (puertas){
-        super()
+    constructor (marca,modelo,precio,puertas){
+      super(marca,modelo,precio);
         this.puertas = puertas;
     }
 
   }
 
   class Moto extends Vehiculo {
-    constructor (cilindrada){
-        super()
+    constructor (marca,modelo,precio,cilindrada){
+      super(marca,modelo,precio);
         this.cilindrada = cilindrada;
     }
 
@@ -26,39 +26,23 @@ class Vehiculo{
  
   var ArrayVehiculos = new Array();
 
-  var vehiculoTemporal = new Auto ();
-  vehiculoTemporal.marca = "Peugeot",
-  vehiculoTemporal.modelo = "206";
-  vehiculoTemporal.precio = 200000
-  vehiculoTemporal.puertas = 4; 
+  var vehiculoTemporal = new Auto ("Peugeot","206",200000,4);
 
   delete(vehiculoTemporal);
   ArrayVehiculos.push(vehiculoTemporal);
   
-  vehiculoTemporal = new Moto ();
-  vehiculoTemporal.marca = "Honda",
-  vehiculoTemporal.modelo = "Titan";
-  vehiculoTemporal.precio = 60000
-  vehiculoTemporal.cilindrada = 125; 
+  vehiculoTemporal = new Moto ("Honda","Titan",60000,125);
 
   delete(vehiculoTemporal);
   ArrayVehiculos.push(vehiculoTemporal);
   
-  vehiculoTemporal = new Auto ();
-  vehiculoTemporal.marca = "Peugeot",
-  vehiculoTemporal.modelo = "208";
-  vehiculoTemporal.precio = 250000
-  vehiculoTemporal.puertas = 5; 
+  vehiculoTemporal = new Auto ("Peugeot","208",250000,5);
 
   delete(vehiculoTemporal);
   ArrayVehiculos.push(vehiculoTemporal);
   
-  vehiculoTemporal = new Moto ();
-  vehiculoTemporal.marca = "Yamaha",
-  vehiculoTemporal.modelo = "YBR";
-  vehiculoTemporal.precio = 80500.5
-  vehiculoTemporal.cilindrada = 160; 
-  
+  vehiculoTemporal = new Moto ("Yamaha","YBR",80500.5,160);
+
   delete(vehiculoTemporal);
   ArrayVehiculos.push(vehiculoTemporal);
 
